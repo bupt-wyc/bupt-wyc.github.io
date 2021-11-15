@@ -31,6 +31,33 @@
     
     
     <entry>
+      <title>操作系统内核实验第四次报告</title>
+      <link href="/bupt-wyc.github.io/2021/11/14/cao-zuo-xi-tong-nei-he-shi-yan-di-si-ci/"/>
+      <url>/bupt-wyc.github.io/2021/11/14/cao-zuo-xi-tong-nei-he-shi-yan-di-si-ci/</url>
+      
+        <content type="html"><![CDATA[<h3 id="操作系统内核实验第四次"><a href="#操作系统内核实验第四次" class="headerlink" title="操作系统内核实验第四次"></a>操作系统内核实验第四次</h3><h4 id="2019661801班-2019522005-王雨宸"><a href="#2019661801班-2019522005-王雨宸" class="headerlink" title="2019661801班          2019522005          王雨宸"></a>2019661801班          2019522005          王雨宸</h4><h4 id="步骤一：设置中断描述符表来处理-CPU-中断"><a href="#步骤一：设置中断描述符表来处理-CPU-中断" class="headerlink" title="步骤一：设置中断描述符表来处理 CPU 中断"></a>步骤一：设置中断描述符表来处理 CPU 中断</h4><p>cd interrupts</p><p>make</p><p><img src="/bupt-wyc.github.io/2021/11/14/cao-zuo-xi-tong-nei-he-shi-yan-di-si-ci/image-20211115192607679.png" alt="image-20211115192607679"></p><p>qemu-system-i386 –fda os-image.bin</p><p><img src="/bupt-wyc.github.io/2021/11/14/cao-zuo-xi-tong-nei-he-shi-yan-di-si-ci/image-20211115192801205.png" alt="image-20211115192801205"></p><p><img src="/bupt-wyc.github.io/2021/11/14/cao-zuo-xi-tong-nei-he-shi-yan-di-si-ci/image-20211115192723814.png" alt="image-20211115192723814"></p><h4 id="步骤二：-完成中断实现和-CPU-计时器"><a href="#步骤二：-完成中断实现和-CPU-计时器" class="headerlink" title="步骤二： 完成中断实现和 CPU 计时器"></a>步骤二： 完成中断实现和 CPU 计时器</h4><p>cd interrupts-irqs</p><p>make</p><p><img src="/bupt-wyc.github.io/2021/11/14/cao-zuo-xi-tong-nei-he-shi-yan-di-si-ci/image-20211115193130610.png" alt="image-20211115193130610"></p><p>qemu-system-i386 –fda os-image.bin</p><p><img src="/bupt-wyc.github.io/2021/11/14/cao-zuo-xi-tong-nei-he-shi-yan-di-si-ci/image-20211115193231516.png" alt="image-20211115193231516"></p><h4 id="步骤三：-实现我们的第一个-IRQ-处理程序-CPU-计时器和键盘"><a href="#步骤三：-实现我们的第一个-IRQ-处理程序-CPU-计时器和键盘" class="headerlink" title="步骤三： 实现我们的第一个 IRQ 处理程序:CPU 计时器和键盘"></a>步骤三： 实现我们的第一个 IRQ 处理程序:CPU 计时器和键盘</h4><p>cd interrupts-timer</p><p>make</p><p><img src="/bupt-wyc.github.io/2021/11/14/cao-zuo-xi-tong-nei-he-shi-yan-di-si-ci/image-20211115193441298.png" alt="image-20211115193441298"></p><p>qemu-system-i386 –fda os-image.bin</p><p><img src="/bupt-wyc.github.io/2021/11/14/cao-zuo-xi-tong-nei-he-shi-yan-di-si-ci/image-20211115193525202.png" alt="image-20211115193525202"></p><h4 id="步骤四：-设计命令行界面并解析用户输入"><a href="#步骤四：-设计命令行界面并解析用户输入" class="headerlink" title="步骤四： 设计命令行界面并解析用户输入"></a>步骤四： 设计命令行界面并解析用户输入</h4><p>cd shell</p><p>make</p><p><img src="/bupt-wyc.github.io/2021/11/14/cao-zuo-xi-tong-nei-he-shi-yan-di-si-ci/image-20211115193814677.png" alt="image-20211115193814677"></p><p>qemu-system-i386 –fda os-image.bin</p><p><img src="/bupt-wyc.github.io/2021/11/14/cao-zuo-xi-tong-nei-he-shi-yan-di-si-ci/image-20211115193857947.png" alt="image-20211115193857947"></p><p>作业：</p><p>阅读代码画出在系统键盘输入中断流程。</p><p>设计一个进入命令行之前的登录界面，用户名 root，密码 root</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 实验报告 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> shiyan </tag>
+            
+            <tag> os </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>zaishishi</title>
       <link href="/bupt-wyc.github.io/2021/10/26/zaishishi/"/>
       <url>/bupt-wyc.github.io/2021/10/26/zaishishi/</url>
