@@ -20,9 +20,36 @@
       
         <tags>
             
+            <tag> os </tag>
+            
             <tag> shiyan </tag>
             
-            <tag> os </tag>
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>数学整理第一部分： 极限and连续</title>
+      <link href="/bupt-wyc.github.io/2021/11/15/shu-xue-zheng-li-di-yi-bu-fen-ji-xian-and-lian-xu/"/>
+      <url>/bupt-wyc.github.io/2021/11/15/shu-xue-zheng-li-di-yi-bu-fen-ji-xian-and-lian-xu/</url>
+      
+        <content type="html"><![CDATA[<h2 id="数学整理第一部分：极限and连续"><a href="#数学整理第一部分：极限and连续" class="headerlink" title="数学整理第一部分：极限and连续"></a>数学整理第一部分：极限and连续</h2><p>数学整理这一部分我大概会持续更新至我考研前两个月，所以内容均会由我本人思忖后纳入</p><p>一些基础知识的掌握，可以为后续的解题提供更多的思路，使解题更加顺畅！</p><p>常见数列前n项和公式：</p><p><img src="/bupt-wyc.github.io/2021/11/15/shu-xue-zheng-li-di-yi-bu-fen-ji-xian-and-lian-xu/image-20211116013946370.png" alt="image-20211116013946370"></p><p>三角函数还是要弄明白了，各种换算关系，有利于微分和积分的运算，运算的速度还是很重要的</p><p><img src="/bupt-wyc.github.io/2021/11/15/shu-xue-zheng-li-di-yi-bu-fen-ji-xian-and-lian-xu/image-20211116180216630.png" alt="image-20211116180216630"></p><p>倍角公式和半角公式</p><p><img src="/bupt-wyc.github.io/2021/11/15/shu-xue-zheng-li-di-yi-bu-fen-ji-xian-and-lian-xu/image-20211116181225224.png" alt="image-20211116181225224"></p><p><img src="/bupt-wyc.github.io/2021/11/15/shu-xue-zheng-li-di-yi-bu-fen-ji-xian-and-lian-xu/image-20211116181236590.png" alt="image-20211116181236590"></p><p>积化和差与和差化积公式</p><p><img src="/bupt-wyc.github.io/2021/11/15/shu-xue-zheng-li-di-yi-bu-fen-ji-xian-and-lian-xu/image-20211116182137361.png" alt="image-20211116182137361"></p><p>万能三角代换公式 u =tanx/2 sinx=2u/1+u方  cosx=1-u方/1+u方</p><p>常用因式分解公式：</p><p><img src="/bupt-wyc.github.io/2021/11/15/shu-xue-zheng-li-di-yi-bu-fen-ji-xian-and-lian-xu/image-20211116192203716.png" alt="image-20211116192203716"></p><p>常用不等式：</p><p><img src="/bupt-wyc.github.io/2021/11/15/shu-xue-zheng-li-di-yi-bu-fen-ji-xian-and-lian-xu/image-20211116192253013.png" alt="image-20211116192253013"></p><h5 id="下面开始正式进入连续与极限了"><a href="#下面开始正式进入连续与极限了" class="headerlink" title="下面开始正式进入连续与极限了"></a>下面开始正式进入连续与极限了</h5>]]></content>
+      
+      
+      <categories>
+          
+          <category> 学习记录 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> math </tag>
+            
+            <tag> zongjie，xuexi </tag>
             
         </tags>
       
@@ -47,9 +74,9 @@
       
         <tags>
             
-            <tag> pwn </tag>
-            
             <tag> shiyan </tag>
+            
+            <tag> pwn </tag>
             
         </tags>
       
