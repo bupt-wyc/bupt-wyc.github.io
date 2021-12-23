@@ -1,0 +1,2068 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="信息系统安全期末复习, yuchenblog">
+    <meta name="description" content="照着老师的大纲整理的">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>信息系统安全期末复习 | yuchenblog</title>
+    <link rel="icon" type="image/png" href="/bupt-wyc.github.io/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/bupt-wyc.github.io/libs/awesome/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="/bupt-wyc.github.io/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/bupt-wyc.github.io/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/bupt-wyc.github.io/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/bupt-wyc.github.io/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/bupt-wyc.github.io/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/bupt-wyc.github.io/css/my.css">
+
+    <script src="/bupt-wyc.github.io/libs/jquery/jquery.min.js"></script>
+ 
+<!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-card-history/baiduhistory/css/main.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/hexo-electric-clock@1.0.6/clock.css"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head>
+
+
+
+
+<body>
+    
+    <!--  加载动画，强制加载0.5s  -->
+    <style type="text/css">
+    #loading-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+    width: 100vw;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #FFF;
+    text-align: center;
+    /* loader页面消失采用渐隐的方式*/
+    -webkit-transition: opacity 1s ease;
+    -moz-transition: opacity 1s ease;
+    -o-transition: opacity 1s ease;
+    transition: opacity 1s ease;
+}
+.loading-image{
+    width: 120px;
+    height: 50px;
+    transform: translate(-50%);
+}
+
+.loading-image div:nth-child(2) {
+    -webkit-animation: pacman-balls 1s linear 0s infinite;
+    animation: pacman-balls 1s linear 0s infinite
+}
+
+.loading-image div:nth-child(3) {
+    -webkit-animation: pacman-balls 1s linear .33s infinite;
+    animation: pacman-balls 1s linear .33s infinite
+}
+
+.loading-image div:nth-child(4) {
+    -webkit-animation: pacman-balls 1s linear .66s infinite;
+    animation: pacman-balls 1s linear .66s infinite
+}
+
+.loading-image div:nth-child(5) {
+    -webkit-animation: pacman-balls 1s linear .99s infinite;
+    animation: pacman-balls 1s linear .99s infinite
+}
+
+.loading-image div:first-of-type {
+    width: 0;
+    height: 0;
+    border: 25px solid #49b1f5;
+    border-right-color: transparent;
+    border-radius: 25px;
+    -webkit-animation: rotate_pacman_half_up .5s 0s infinite;
+    animation: rotate_pacman_half_up .5s 0s infinite;
+}
+.loading-image div:nth-child(2) {
+    width: 0;
+    height: 0;
+    border: 25px solid #49b1f5;
+    border-right-color: transparent;
+    border-radius: 25px;
+    -webkit-animation: rotate_pacman_half_down .5s 0s infinite;
+    animation: rotate_pacman_half_down .5s 0s infinite;
+    margin-top: -50px;
+}
+@-webkit-keyframes rotate_pacman_half_up {0% {transform: rotate(270deg)}50% {transform: rotate(1turn)}to {transform: rotate(270deg)}}
+
+@keyframes rotate_pacman_half_up {0% {transform: rotate(270deg)}50% {transform: rotate(1turn)}to {transform: rotate(270deg)}}
+
+@-webkit-keyframes rotate_pacman_half_down {0% {transform: rotate(90deg)}50% {transform: rotate(0deg)}to {transform: rotate(90deg)}}
+
+@keyframes rotate_pacman_half_down {0% {transform: rotate(90deg)}50% {transform: rotate(0deg)}to {transform: rotate(90deg)}}
+
+@-webkit-keyframes pacman-balls {75% {opacity: .7}to {transform: translate(-100px, -6.25px)}}
+
+@keyframes pacman-balls {75% {opacity: .7}to {transform: translate(-100px, -6.25px)}}
+
+
+.loading-image div:nth-child(3),
+.loading-image div:nth-child(4),
+.loading-image div:nth-child(5),
+.loading-image div:nth-child(6){
+    background-color: #49b1f5;
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    margin: 2px;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    transform: translateY(-6.25px);
+    top: 25px;
+    left: 100px;
+}
+.loading-text{
+    margin-bottom: 20vh;
+    text-align: center;
+    color: #2c3e50;
+    font-size: 2rem;
+    box-sizing: border-box;
+    padding: 0 10px;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+@media only screen and (max-width: 500px) {
+    .loading-text{
+        font-size: 1.5rem;
+    }
+}
+.fadeout {
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+/* logo出现动画 */
+@-webkit-keyframes fadeInDown{0%{opacity:0;-webkit-transform:translate3d(0,-100%,0);transform:translate3d(0,-100%,0)}100%{opacity:1;-webkit-transform:none;transform:none}}
+@keyframes fadeInDown{0%{opacity:0;-webkit-transform:translate3d(0,-100%,0);}}
+</style>
+<div id="loading-container">
+    <p class="loading-text">嘘 ~ 正在从服务器偷取页面 . . . </p>
+    <div class="loading-image">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</div>
+<script>
+    (function () {
+        const loaded = function () {
+            setTimeout(function () {
+                const loader = document.getElementById("loading-container");
+                loader.className = "fadeout";
+                setTimeout(function () {
+                    loader.style.display = "none";
+                }, 500);
+            }, 500);
+        };
+        loaded();
+    })();
+</script>
+
+
+
+    <div class="stars-con">
+      <div id="stars"></div>
+      <div id="stars2"></div>
+      <div id="stars3"></div>  
+    </div>
+    <svg aria-hidden="true" style="position: absolute; overflow: hidden; width: 0; height: 0">
+        <symbol id="icon-sun" viewBox="0 0 1024 1024">
+          <path d="M960 512l-128 128v192h-192l-128 128-128-128H192v-192l-128-128 128-128V192h192l128-128 128 128h192v192z" fill="#FFD878" p-id="8420"></path>
+          <path d="M736 512a224 224 0 1 0-448 0 224 224 0 1 0 448 0z" fill="#FFE4A9" p-id="8421"></path>
+          <path d="M512 109.248L626.752 224H800v173.248L914.752 512 800 626.752V800h-173.248L512 914.752 397.248 800H224v-173.248L109.248 512 224 397.248V224h173.248L512 109.248M512 64l-128 128H192v192l-128 128 128 128v192h192l128 128 128-128h192v-192l128-128-128-128V192h-192l-128-128z" fill="#4D5152" p-id="8422"></path>
+          <path d="M512 320c105.888 0 192 86.112 192 192s-86.112 192-192 192-192-86.112-192-192 86.112-192 192-192m0-32a224 224 0 1 0 0 448 224 224 0 0 0 0-448z" fill="#4D5152" p-id="8423"></path>
+        </symbol>
+        <symbol id="icon-moon" viewBox="0 0 1024 1024">
+          <path d="M611.370667 167.082667a445.013333 445.013333 0 0 1-38.4 161.834666 477.824 477.824 0 0 1-244.736 244.394667 445.141333 445.141333 0 0 1-161.109334 38.058667 85.077333 85.077333 0 0 0-65.066666 135.722666A462.08 462.08 0 1 0 747.093333 102.058667a85.077333 85.077333 0 0 0-135.722666 65.024z" fill="#FFB531" p-id="11345"></path>
+          <path d="M329.728 274.133333l35.157333-35.157333a21.333333 21.333333 0 1 0-30.165333-30.165333l-35.157333 35.157333-35.114667-35.157333a21.333333 21.333333 0 0 0-30.165333 30.165333l35.114666 35.157333-35.114666 35.157334a21.333333 21.333333 0 1 0 30.165333 30.165333l35.114667-35.157333 35.157333 35.157333a21.333333 21.333333 0 1 0 30.165333-30.165333z" fill="#030835" p-id="11346"></path>
+        </symbol>
+      </svg>
+      <a onclick="switchNightMode()" class="icon-V hidden" title="切换主题">
+        <svg width="48" height="48" viewBox="0 0 1024 1024">
+          <use id="modeicon" xlink:href="#icon-moon"></use>
+        </svg>
+      </a>
+<script>
+      function checkNightMode() {
+        '1' === localStorage.getItem('isDark') ? ($('body').addClass('DarkMode'), $('#changeMode-top').removeClass('fa-moon').addClass('fa-sun'), $('#modeicon').attr('xlink:href', '#icon-sun')) : '0' === localStorage.getItem('isDark') ? $('#modeicon').attr('xlink:href', '#icon-moon') : new Date().getHours() >= 20 || new Date().getHours() < 7 ? ($('body').addClass('DarkMode'), $('#changeMode-top').removeClass('fa-moon').addClass('fa-sun'), $('#modeicon').attr('xlink:href', '#icon-sun')) : matchMedia('(prefers-color-scheme: dark)').matches ? ($('body').addClass('DarkMode'), $('#changeMode-top').removeClass('fa-moon').addClass('fa-sun'), $('#modeicon').attr('xlink:href', '#icon-sun')) : $('#modeicon').attr('xlink:href', '#icon-moon')
+      }
+      function switchNightMode() {
+        $('<div class="Cuteen_DarkSky"><div class="Cuteen_DarkPlanet"></div></div>').appendTo($('body')),
+          setTimeout(function () {
+            $('body').hasClass('DarkMode') ? ($('body').removeClass('DarkMode'), localStorage.setItem('isDark', '0'), $('#changeMode-top').removeClass('fa-sun').addClass('fa-moon'), $('#modeicon').attr('xlink:href', '#icon-moon')) : ($('body').addClass('DarkMode'), localStorage.setItem('isDark', '1'), $('#changeMode-top').removeClass('fa-moon').addClass('fa-sun'), $('#modeicon').attr('xlink:href', '#icon-sun')),
+              setTimeout(function () {
+                $('.Cuteen_DarkSky').fadeOut(1e3, function () {
+                  $(this).remove()
+                })
+              }, 2e3)
+          })
+      }
+      function switchNightModeTop() {
+        $('body').hasClass('DarkMode') ? ($('body').removeClass('DarkMode'), localStorage.setItem('isDark', '0'), $('#changeMode-top').removeClass('fa-sun').addClass('fa-moon'), $('#modeicon').attr('xlink:href', '#icon-moon')) : ($('body').addClass('DarkMode'), localStorage.setItem('isDark', '1'), $('#changeMode-top').removeClass('fa-moon').addClass('fa-sun'), $('#modeicon').attr('xlink:href', '#icon-sun'))
+      }
+    </script>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/bupt-wyc.github.io/" class="waves-effect waves-light">
+                    
+                    <img src="/bupt-wyc.github.io/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">yuchenblog</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/bupt-wyc.github.io/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/bupt-wyc.github.io/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/bupt-wyc.github.io/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/bupt-wyc.github.io/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/bupt-wyc.github.io/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/bupt-wyc.github.io/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/bupt-wyc.github.io/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="" class="waves-effect waves-light">
+
+      
+      <i class="fas fa-list-ul" style="zoom: 0.6;"></i>
+      
+      <span>目录</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a href="/bupt-wyc.github.io/books">
+          
+          <i class="fas fa-book" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>书籍</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/bupt-wyc.github.io/movies">
+          
+          <i class="fas fa-film" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>电影</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/bupt-wyc.github.io/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">yuchenblog</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/bupt-wyc.github.io/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/bupt-wyc.github.io/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/bupt-wyc.github.io/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/bupt-wyc.github.io/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/bupt-wyc.github.io/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/bupt-wyc.github.io/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/bupt-wyc.github.io/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fa-fw fas fa-list-ul"></i>
+			
+			目录
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a href="/bupt-wyc.github.io/books " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-book" style="position: absolute;left:50px" ></i>
+			      
+		          <span>书籍</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/bupt-wyc.github.io/movies " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-film" style="position: absolute;left:50px" ></i>
+			      
+		          <span>电影</span>
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </li>
+        
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+    </nav>
+
+</header>
+
+    
+<script src="/bupt-wyc.github.io/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/bupt-wyc.github.io/';
+            }
+        }
+    })();
+</script>
+
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/bupt-wyc.github.io/medias/featureimages/0.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">信息系统安全期末复习</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/bupt-wyc.github.io/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+      width: 345px;
+      padding-left: 20px;
+      background-color: rgb(255, 255, 255,0.7);
+      border-radius: 10px;
+      box-shadow: 0 10px 35px 2px rgba(0, 0, 0, .15), 0 5px 15px rgba(0, 0, 0, .07), 0 2px 5px -5px rgba(0, 0, 0, .1) !important;
+  }
+
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/bupt-wyc.github.io/tags/os/">
+                                <span class="chip bg-color">os</span>
+                            </a>
+                        
+                            <a href="/bupt-wyc.github.io/tags/fuxi/">
+                                <span class="chip bg-color">fuxi</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/bupt-wyc.github.io/categories/%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99/" class="post-category">
+                                复习资料
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2021-12-22
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2021-12-23
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    2.4k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    8 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/bupt-wyc.github.io/libs/prism/prism.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h2 id="信息系统期末复习-12-22"><a href="#信息系统期末复习-12-22" class="headerlink" title="信息系统期末复习 12.22"></a>信息系统期末复习 12.22</h2><h3 id="第一讲信息系统概念"><a href="#第一讲信息系统概念" class="headerlink" title="第一讲信息系统概念"></a>第一讲信息系统概念</h3><h4 id="概念："><a href="#概念：" class="headerlink" title="概念："></a>概念：</h4><h5 id="什么是信息系统："><a href="#什么是信息系统：" class="headerlink" title="什么是信息系统："></a>什么是信息系统：</h5><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211222003507517.png" alt="image-20211222003507517"></p>
+<h5 id="信息系统例子"><a href="#信息系统例子" class="headerlink" title="信息系统例子 :"></a>信息系统例子 :</h5><p>预警机：空警500  美澳联合防务基地 </p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211222011116449.png" alt="image-20211222011116449"></p>
+<h6 id="边缘计算："><a href="#边缘计算：" class="headerlink" title="边缘计算："></a>边缘计算：</h6><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211222022734566.png" alt="image-20211222022734566"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211222022745554.png" alt="image-20211222022745554"></p>
+<h6 id="云计算："><a href="#云计算：" class="headerlink" title="云计算："></a>云计算：</h6><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211222022915531.png" alt="image-20211222022915531"></p>
+<h6 id="雾计算："><a href="#雾计算：" class="headerlink" title="雾计算："></a>雾计算：</h6><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211222023327700.png" alt="image-20211222023327700"></p>
+<h5 id="信息系统架构及复杂度："><a href="#信息系统架构及复杂度：" class="headerlink" title="信息系统架构及复杂度："></a>信息系统架构及复杂度：</h5><h6 id="什么是架构："><a href="#什么是架构：" class="headerlink" title="什么是架构："></a>什么是架构：</h6><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211222174604389.png" alt="image-20211222174604389"></p>
+<h6 id="架构的复杂度："><a href="#架构的复杂度：" class="headerlink" title="架构的复杂度："></a>架构的复杂度：</h6><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211222175326821.png" alt="image-20211222175326821"></p>
+<h4 id="原理："><a href="#原理：" class="headerlink" title="原理："></a>原理：</h4><h5 id="信息系统的发展趋势："><a href="#信息系统的发展趋势：" class="headerlink" title="信息系统的发展趋势："></a>信息系统的发展趋势：</h5><p>1.与大数据的结合 2.和物联网的结合 3.边缘计算和云计算互相协同 4.和5g的结合 5.和人工智能的结合-互联网的进化 6.和工业互联网的结合</p>
+<h5 id="信息系统架构的重要性及其发展趋势："><a href="#信息系统架构的重要性及其发展趋势：" class="headerlink" title="信息系统架构的重要性及其发展趋势："></a>信息系统架构的重要性及其发展趋势：</h5><p>面临越来越重的负载      发展趋势：分布式，高可用，集群，负载均衡，正向代理和反向代理 </p>
+<h5 id="针对“秒杀”及百万级并发等情况的架构-设计："><a href="#针对“秒杀”及百万级并发等情况的架构-设计：" class="headerlink" title="针对“秒杀”及百万级并发等情况的架构 设计："></a>针对“秒杀”及百万级并发等情况的架构 设计：</h5><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211222180230242.png" alt="image-20211222180230242"></p>
+<h5 id="信息系统为什么存在架构的复杂性问题？如何度量信息系统的复杂度？"><a href="#信息系统为什么存在架构的复杂性问题？如何度量信息系统的复杂度？" class="headerlink" title="信息系统为什么存在架构的复杂性问题？如何度量信息系统的复杂度？"></a>信息系统为什么存在架构的复杂性问题？如何度量信息系统的复杂度？</h5><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211222180426760.png" alt="image-20211222180426760"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211222180539193.png" alt="image-20211222180539193"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211222180644483.png" alt="image-20211222180644483"></p>
+<h5 id="云计算的架构："><a href="#云计算的架构：" class="headerlink" title="云计算的架构："></a>云计算的架构：</h5><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211222180842350.png" alt="image-20211222180842350"></p>
+<h4 id="操作："><a href="#操作：" class="headerlink" title="操作："></a>操作：</h4><h5 id="简单的信息系统架构设计："><a href="#简单的信息系统架构设计：" class="headerlink" title="简单的信息系统架构设计："></a>简单的信息系统架构设计：</h5><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211222181206713.png" alt="image-20211222181206713"></p>
+<h5 id="针对特定的信息系统及其业务需求，设计相应的抗秒杀技术："><a href="#针对特定的信息系统及其业务需求，设计相应的抗秒杀技术：" class="headerlink" title="针对特定的信息系统及其业务需求，设计相应的抗秒杀技术："></a>针对特定的信息系统及其业务需求，设计相应的抗秒杀技术：</h5><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211222181356763.png" alt="image-20211222181356763"></p>
+<h3 id="第二讲信息系统安全概述："><a href="#第二讲信息系统安全概述：" class="headerlink" title="第二讲信息系统安全概述："></a>第二讲信息系统安全概述：</h3><h4 id="概念：-1"><a href="#概念：-1" class="headerlink" title="概念："></a>概念：</h4><h5 id="信息系统安全威胁-常见威胁-攻击致命度："><a href="#信息系统安全威胁-常见威胁-攻击致命度：" class="headerlink" title="信息系统安全威胁 常见威胁 攻击致命度："></a>信息系统安全威胁 常见威胁 攻击致命度：</h5><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211222210915191.png" alt="image-20211222210915191"></p>
+<h5 id="信息系统安全概念-如何理解一个信息系统是安全的："><a href="#信息系统安全概念-如何理解一个信息系统是安全的：" class="headerlink" title="信息系统安全概念 如何理解一个信息系统是安全的："></a>信息系统安全概念 如何理解一个信息系统是安全的：</h5><h6 id="概念：-2"><a href="#概念：-2" class="headerlink" title="概念："></a>概念：</h6><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211222213912366.png" alt="image-20211222213912366"></p>
+<h6 id="如何理解："><a href="#如何理解：" class="headerlink" title="如何理解："></a>如何理解：</h6><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211222214313227.png" alt="image-20211222214313227"></p>
+<h5 id="信息系统安全保障体系的要素和能力："><a href="#信息系统安全保障体系的要素和能力：" class="headerlink" title="信息系统安全保障体系的要素和能力："></a>信息系统安全保障体系的要素和能力：</h5><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211222224359155.png" alt="image-20211222224359155"></p>
+<h5 id="基于信息保障的信息系统安全概念："><a href="#基于信息保障的信息系统安全概念：" class="headerlink" title="基于信息保障的信息系统安全概念："></a>基于信息保障的信息系统安全概念：</h5><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211222215858597.png" alt="image-20211222215858597"></p>
+<h4 id="原理：-1"><a href="#原理：-1" class="headerlink" title="原理："></a>原理：</h4><h5 id="信息系统为什么是脆弱的"><a href="#信息系统为什么是脆弱的" class="headerlink" title="信息系统为什么是脆弱的"></a>信息系统为什么是脆弱的</h5><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211222211427900.png" alt="image-20211222211427900"></p>
+<h5 id="analog-attack的基本思想"><a href="#analog-attack的基本思想" class="headerlink" title="analog attack的基本思想"></a>analog attack的基本思想</h5><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211222213459424.png" alt="image-20211222213459424"></p>
+<h5 id="攻防不对称及应对思路，拟态主动防御"><a href="#攻防不对称及应对思路，拟态主动防御" class="headerlink" title="攻防不对称及应对思路，拟态主动防御"></a>攻防不对称及应对思路，拟态主动防御</h5><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211222213703923.png" alt="image-20211222213703923"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211222223051724.png" alt="image-20211222223051724"></p>
+<h5 id="5G对信息系统安全带来的挑战"><a href="#5G对信息系统安全带来的挑战" class="headerlink" title="5G对信息系统安全带来的挑战"></a>5G对信息系统安全带来的挑战</h5><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211222213814076.png" alt="image-20211222213814076"></p>
+<h5 id="信息系统安全的实质，怎么理解什么信息系统是安全的"><a href="#信息系统安全的实质，怎么理解什么信息系统是安全的" class="headerlink" title="信息系统安全的实质，怎么理解什么信息系统是安全的"></a>信息系统安全的实质，怎么理解什么信息系统是安全的</h5><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211222214313227.png"></p>
+<h5 id="信息系统安全保障模型-CMM框架"><a href="#信息系统安全保障模型-CMM框架" class="headerlink" title="信息系统安全保障模型 CMM框架"></a>信息系统安全保障模型 CMM框架</h5><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211222221140540.png" alt="image-20211222221140540"></p>
+<h4 id="操作：-1"><a href="#操作：-1" class="headerlink" title="操作："></a>操作：</h4><h5 id="对信息系统安全威胁分析"><a href="#对信息系统安全威胁分析" class="headerlink" title="对信息系统安全威胁分析"></a>对信息系统安全威胁分析</h5><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211222210915191.png" alt="image-20211222210915191"></p>
+<p>按这个图进行分析 </p>
+<h3 id="第三讲安全需求和安全策略"><a href="#第三讲安全需求和安全策略" class="headerlink" title="第三讲安全需求和安全策略"></a>第三讲安全需求和安全策略</h3><h4 id="概念：-3"><a href="#概念：-3" class="headerlink" title="概念："></a>概念：</h4><h5 id="安全需求，一般性的安全需求"><a href="#安全需求，一般性的安全需求" class="headerlink" title="安全需求，一般性的安全需求"></a>安全需求，一般性的安全需求</h5><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211222225713681.png" alt="image-20211222225713681"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211222230024118.png" alt="image-20211222230024118"></p>
+<h6 id="一般性的安全需求："><a href="#一般性的安全需求：" class="headerlink" title="一般性的安全需求："></a>一般性的安全需求：</h6><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211222225845385.png"></p>
+<h5 id="安全策略：访问控制策略（dac、mac），如何从安全策略的角度理解信息系统安全"><a href="#安全策略：访问控制策略（dac、mac），如何从安全策略的角度理解信息系统安全" class="headerlink" title="安全策略：访问控制策略（dac、mac），如何从安全策略的角度理解信息系统安全"></a>安全策略：访问控制策略（dac、mac），如何从安全策略的角度理解信息系统安全</h5><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211222230417944.png" alt="image-20211222230417944"></p>
+<h6 id="dac：自主访问控制策略"><a href="#dac：自主访问控制策略" class="headerlink" title="dac：自主访问控制策略"></a>dac：自主访问控制策略</h6><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211222230937028.png" alt="image-20211222230937028"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211222230951851.png" alt="image-20211222230951851"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211222231057833.png" alt="image-20211222231057833"></p>
+<h6 id="MAC强制访问模型："><a href="#MAC强制访问模型：" class="headerlink" title="MAC强制访问模型："></a>MAC强制访问模型：</h6><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211222231130790.png" alt="image-20211222231130790"></p>
+<h6 id="如何通过mac理解信息系统安全"><a href="#如何通过mac理解信息系统安全" class="headerlink" title="如何通过mac理解信息系统安全"></a>如何通过mac理解信息系统安全</h6><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211222232328757.png" alt="image-20211222232328757"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211222232347513.png" alt="image-20211222232347513"></p>
+<h5 id="安全策略如何应用到防火墙等安全设备"><a href="#安全策略如何应用到防火墙等安全设备" class="headerlink" title="安全策略如何应用到防火墙等安全设备"></a>安全策略如何应用到防火墙等安全设备</h5><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211222235450125.png" alt="image-20211222235450125"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211222235532522.png" alt="image-20211222235532522"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211222235516767.png" alt="image-20211222235516767"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223000532030.png" alt="image-20211223000532030"></p>
+<h5 id="主体，客体及其属性"><a href="#主体，客体及其属性" class="headerlink" title="主体，客体及其属性"></a>主体，客体及其属性</h5><h6 id="主体："><a href="#主体：" class="headerlink" title="主体："></a>主体：</h6><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211222230446978.png" alt="image-20211222230446978"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211222230503686.png" alt="image-20211222230503686"></p>
+<h6 id="客体："><a href="#客体：" class="headerlink" title="客体："></a>客体：</h6><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211222230524372.png" alt="image-20211222230524372"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211222230534864.png" alt="image-20211222230534864"></p>
+<h5 id="访问控制列表：标准访问控制，扩展访问控制，通配掩码"><a href="#访问控制列表：标准访问控制，扩展访问控制，通配掩码" class="headerlink" title="访问控制列表：标准访问控制，扩展访问控制，通配掩码"></a>访问控制列表：标准访问控制，扩展访问控制，通配掩码</h5><h6 id="标准访问控制："><a href="#标准访问控制：" class="headerlink" title="标准访问控制："></a>标准访问控制：</h6><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211222235408209.png" alt="image-20211222235408209"></p>
+<h6 id="通配掩码："><a href="#通配掩码：" class="headerlink" title="通配掩码："></a>通配掩码：</h6><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211222235249137.png" alt="image-20211222235249137"></p>
+<h4 id="原理：-2"><a href="#原理：-2" class="headerlink" title="原理："></a>原理：</h4><h5 id="windows、linux、symbian、andriod的访问控制模型"><a href="#windows、linux、symbian、andriod的访问控制模型" class="headerlink" title="windows、linux、symbian、andriod的访问控制模型"></a>windows、linux、symbian、andriod的访问控制模型</h5><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223000105697.png" alt="image-20211223000105697"></p>
+<h5 id="常见的自主访问控制模型：访问能力表CL。访问控制列表ACL，访问控制矩阵及其windows、linux实现"><a href="#常见的自主访问控制模型：访问能力表CL。访问控制列表ACL，访问控制矩阵及其windows、linux实现" class="headerlink" title="常见的自主访问控制模型：访问能力表CL。访问控制列表ACL，访问控制矩阵及其windows、linux实现"></a>常见的自主访问控制模型：访问能力表CL。访问控制列表ACL，访问控制矩阵及其windows、linux实现</h5><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211222235832179.png" alt="image-20211222235832179"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211222232505970.png" alt="image-20211222232505970"></p>
+<h6 id="访问控制矩阵"><a href="#访问控制矩阵" class="headerlink" title="访问控制矩阵"></a>访问控制矩阵</h6><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211222235913978.png" alt="image-20211222235913978"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223000046812.png" alt="image-20211223000046812"></p>
+<h5 id="常见的强制访问控制模型：Bell-LaPandula、BIBA原理、优缺点及其应用"><a href="#常见的强制访问控制模型：Bell-LaPandula、BIBA原理、优缺点及其应用" class="headerlink" title="常见的强制访问控制模型：Bell-LaPandula、BIBA原理、优缺点及其应用"></a>常见的强制访问控制模型：Bell-LaPandula、BIBA原理、优缺点及其应用</h5><p>Bell-</p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223000134596.png" alt="image-20211223000134596"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223000944189.png" alt="image-20211223000944189"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223000620863.png" alt="image-20211223000620863"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223000504818.png" alt="image-20211223000504818"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223000639124.png" alt="image-20211223000639124"></p>
+<h6 id="应用："><a href="#应用：" class="headerlink" title="应用："></a>应用：</h6><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223000715884.png" alt="image-20211223000715884"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223000732218.png" alt="image-20211223000732218"></p>
+<h4 id="操作：-2"><a href="#操作：-2" class="headerlink" title="操作："></a>操作：</h4><h5 id="根据安全威胁分析安全需求"><a href="#根据安全威胁分析安全需求" class="headerlink" title="根据安全威胁分析安全需求"></a>根据安全威胁分析安全需求</h5><p><img src="/bupt-wyc.github.io/2021/12/22/xin-xi-xi-tong-qi-mo-fu-xi-12.22/Users\hp\AppData\Roaming\Typora\typora-user-images\image-20211223001031934.png" alt="image-20211223001031934"></p>
+<p>根据下图，了解信息系统所受的安全威胁 分析安全需求</p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223001102973.png" alt="image-20211223001102973"></p>
+<h5 id="可根据需要编写标准ACL或扩展ACL，特别是通配掩码的使用"><a href="#可根据需要编写标准ACL或扩展ACL，特别是通配掩码的使用" class="headerlink" title="可根据需要编写标准ACL或扩展ACL，特别是通配掩码的使用"></a>可根据需要编写标准ACL或扩展ACL，特别是通配掩码的使用</h5><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211222232852083.png" alt="image-20211222232852083"></p>
+<p><img src="/bupt-wyc.github.io/2021/12/22/xin-xi-xi-tong-qi-mo-fu-xi-12.22/Users\hp\AppData\Roaming\Typora\typora-user-images\image-20211222232915759.png" alt="image-20211222232915759"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211222233026560.png" alt="image-20211222233026560"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211222233052905.png" alt="image-20211222233052905"></p>
+<h6 id="举例："><a href="#举例：" class="headerlink" title="举例："></a>举例：</h6><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211222233503422.png" alt="image-20211222233503422"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211222233513632.png" alt="image-20211222233513632"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211222233532344.png" alt="image-20211222233532344"></p>
+<h6 id="通配掩码的使用"><a href="#通配掩码的使用" class="headerlink" title="通配掩码的使用"></a>通配掩码的使用</h6><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211222233223710.png" alt="image-20211222233223710"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211222233406057.png" alt="image-20211222233406057"></p>
+<p>是0表示检查相应bit位的值</p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211222233721696.png" alt="image-20211222233721696"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211222233834994.png" alt="image-20211222233834994"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211222234527574.png" alt="image-20211222234527574"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211222234850269.png" alt="image-20211222234850269"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211222234918617.png" alt="image-20211222234918617"></p>
+<h3 id="第四讲信息系统的风险评估"><a href="#第四讲信息系统的风险评估" class="headerlink" title="第四讲信息系统的风险评估"></a>第四讲信息系统的风险评估</h3><h4 id="概念：-4"><a href="#概念：-4" class="headerlink" title="概念："></a>概念：</h4><h5 id="风险的概念"><a href="#风险的概念" class="headerlink" title="风险的概念"></a>风险的概念</h5><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223005622998.png" alt="image-20211223005622998"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223010419532.png" alt="image-20211223010419532"></p>
+<h5 id="什么是安全风险评估"><a href="#什么是安全风险评估" class="headerlink" title="什么是安全风险评估"></a>什么是安全风险评估</h5><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223010525193.png" alt="image-20211223010525193"></p>
+<h5 id="风险评估的要素"><a href="#风险评估的要素" class="headerlink" title="风险评估的要素"></a>风险评估的要素</h5><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223010634126.png" alt="image-20211223010634126"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223010700286.png" alt="image-20211223010700286"></p>
+<h4 id="原理：-3"><a href="#原理：-3" class="headerlink" title="原理："></a>原理：</h4><h5 id="怎样理解一个信息系统是安全的：安全风险概念模型"><a href="#怎样理解一个信息系统是安全的：安全风险概念模型" class="headerlink" title="怎样理解一个信息系统是安全的：安全风险概念模型"></a>怎样理解一个信息系统是安全的：安全风险概念模型</h5><p><img src="/bupt-wyc.github.io/2021/12/22/xin-xi-xi-tong-qi-mo-fu-xi-12.22/Users\hp\AppData\Roaming\Typora\typora-user-images\image-20211223010911229.png" alt="image-20211223010911229"></p>
+<h5 id="风险处置策略"><a href="#风险处置策略" class="headerlink" title="风险处置策略"></a>风险处置策略</h5><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223011020380.png" alt="image-20211223011020380"></p>
+<h5 id="信息系统安全风险计算模型"><a href="#信息系统安全风险计算模型" class="headerlink" title="信息系统安全风险计算模型"></a>信息系统安全风险计算模型</h5><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223011041275.png" alt="image-20211223011041275"></p>
+<h4 id="操作：-3"><a href="#操作：-3" class="headerlink" title="操作："></a>操作：</h4><h5 id="给定某信息系统的业务使命及操作环境，可进行安全风险评估，包括：风险分析方法，资产分类方法及识别模型，威胁赋值，脆弱性赋值等"><a href="#给定某信息系统的业务使命及操作环境，可进行安全风险评估，包括：风险分析方法，资产分类方法及识别模型，威胁赋值，脆弱性赋值等" class="headerlink" title="给定某信息系统的业务使命及操作环境，可进行安全风险评估，包括：风险分析方法，资产分类方法及识别模型，威胁赋值，脆弱性赋值等"></a>给定某信息系统的业务使命及操作环境，可进行安全风险评估，包括：风险分析方法，资产分类方法及识别模型，威胁赋值，脆弱性赋值等</h5><h6 id="风险分析方法"><a href="#风险分析方法" class="headerlink" title="风险分析方法"></a>风险分析方法</h6><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223011159196.png" alt="image-20211223011159196"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223011224399.png" alt="image-20211223011224399"></p>
+<h6 id="资产分类方法："><a href="#资产分类方法：" class="headerlink" title="资产分类方法："></a>资产分类方法：</h6><p><img src="/bupt-wyc.github.io/2021/12/22/xin-xi-xi-tong-qi-mo-fu-xi-12.22/Users\hp\AppData\Roaming\Typora\typora-user-images\image-20211223011407289.png" alt="image-20211223011407289"></p>
+<p>从保密性 完整性 可用性 价值 分五个级别 进行赋值</p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223011709547.png" alt="image-20211223011709547"></p>
+<h6 id="威胁赋值及脆弱性赋值"><a href="#威胁赋值及脆弱性赋值" class="headerlink" title="威胁赋值及脆弱性赋值"></a>威胁赋值及脆弱性赋值</h6><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223011734704.png" alt="image-20211223011734704"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223011941805.png"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223011953090.png" alt="image-20211223011953090"></p>
+<h6 id="风险计算方法："><a href="#风险计算方法：" class="headerlink" title="风险计算方法："></a>风险计算方法：</h6><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223012006622.png" alt="image-20211223012006622"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223012124939.png" alt="image-20211223012124939"></p>
+<h3 id="第五讲信息系统等级保护"><a href="#第五讲信息系统等级保护" class="headerlink" title="第五讲信息系统等级保护"></a>第五讲信息系统等级保护</h3><h4 id="概念：-5"><a href="#概念：-5" class="headerlink" title="概念："></a>概念：</h4><h5 id="什么是等级保护，它和分级保护有什么不同"><a href="#什么是等级保护，它和分级保护有什么不同" class="headerlink" title="什么是等级保护，它和分级保护有什么不同"></a>什么是等级保护，它和分级保护有什么不同</h5><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223012737272.png" alt="image-20211223012737272"></p>
+<h5 id="定级对象"><a href="#定级对象" class="headerlink" title="定级对象"></a>定级对象</h5><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223012827747.png" alt="image-20211223012827747"></p>
+<h4 id="原理：-4"><a href="#原理：-4" class="headerlink" title="原理："></a>原理：</h4><h5 id="等级保护的划分原则及定级建议，定级的流程"><a href="#等级保护的划分原则及定级建议，定级的流程" class="headerlink" title="等级保护的划分原则及定级建议，定级的流程"></a>等级保护的划分原则及定级建议，定级的流程</h5><h6 id="等级保护的划分："><a href="#等级保护的划分：" class="headerlink" title="等级保护的划分："></a>等级保护的划分：</h6><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223012648668.png"></p>
+<h6 id="定级建议："><a href="#定级建议：" class="headerlink" title="定级建议："></a>定级建议：</h6><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223013356178.png" alt="image-20211223013356178"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223013522228.png" alt="image-20211223013522228"></p>
+<h6 id="定级流程："><a href="#定级流程：" class="headerlink" title="定级流程："></a>定级流程：</h6><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223013322946.png" alt="image-20211223013322946"></p>
+<h5 id="等级保护管理组织"><a href="#等级保护管理组织" class="headerlink" title="等级保护管理组织"></a>等级保护管理组织</h5><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223013123838.png" alt="image-20211223013123838"></p>
+<h5 id="等级保护主要工作流程，备案的流程，备案地点"><a href="#等级保护主要工作流程，备案的流程，备案地点" class="headerlink" title="等级保护主要工作流程，备案的流程，备案地点"></a>等级保护主要工作流程，备案的流程，备案地点</h5><h6 id="等级保护主要工作流程："><a href="#等级保护主要工作流程：" class="headerlink" title="等级保护主要工作流程："></a>等级保护主要工作流程：</h6><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223013234180.png" alt="image-20211223013234180"></p>
+<h6 id="备案流程："><a href="#备案流程：" class="headerlink" title="备案流程："></a>备案流程：</h6><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223013838613.png" alt="image-20211223013838613"></p>
+<h6 id="备案地点："><a href="#备案地点：" class="headerlink" title="备案地点："></a>备案地点：</h6><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223013644101.png" alt="image-20211223013644101"></p>
+<h5 id="等级保护主要工作：定级备案，建设整改，等级测评，监督检查"><a href="#等级保护主要工作：定级备案，建设整改，等级测评，监督检查" class="headerlink" title="等级保护主要工作：定级备案，建设整改，等级测评，监督检查"></a>等级保护主要工作：定级备案，建设整改，等级测评，监督检查</h5><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223013738192.png" alt="image-20211223013738192"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223013749865.png" alt="image-20211223013749865"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223013920940.png" alt="image-20211223013920940"></p>
+<h5 id="等保-2-0-考虑了哪些新新技术及新技术催生的新应用"><a href="#等保-2-0-考虑了哪些新新技术及新技术催生的新应用" class="headerlink" title="等保 2.0 考虑了哪些新新技术及新技术催生的新应用"></a>等保 2.0 考虑了哪些新新技术及新技术催生的新应用</h5><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223014235956.png" alt="image-20211223014235956"></p>
+<p>类似这种<img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223014311191.png" alt="image-20211223014311191"></p>
+<h4 id="操作：-4"><a href="#操作：-4" class="headerlink" title="操作："></a>操作：</h4><h5 id="给定某信息系统的业务使命及操作环境，可进行定级，并制定等级保护流程"><a href="#给定某信息系统的业务使命及操作环境，可进行定级，并制定等级保护流程" class="headerlink" title="给定某信息系统的业务使命及操作环境，可进行定级，并制定等级保护流程"></a>给定某信息系统的业务使命及操作环境，可进行定级，并制定等级保护流程</h5><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223013322946.png" alt="image-20211223013322946"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223014037920.png" alt="image-20211223014037920"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223014121620.png" alt="image-20211223014121620"></p>
+<h3 id="第六讲信息系统的物理安全"><a href="#第六讲信息系统的物理安全" class="headerlink" title="第六讲信息系统的物理安全"></a>第六讲信息系统的物理安全</h3><h4 id="概念：-6"><a href="#概念：-6" class="headerlink" title="概念："></a>概念：</h4><h5 id="物理安全的概念，包括环境安全、介质安全、线路安全、供电安全等"><a href="#物理安全的概念，包括环境安全、介质安全、线路安全、供电安全等" class="headerlink" title="物理安全的概念，包括环境安全、介质安全、线路安全、供电安全等"></a>物理安全的概念，包括环境安全、介质安全、线路安全、供电安全等</h5><h6 id="概念：-7"><a href="#概念：-7" class="headerlink" title="概念："></a>概念：</h6><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223015026185.png" alt="image-20211223015026185"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223015039218.png" alt="image-20211223015039218"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223015335823.png" alt="image-20211223015335823"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223015418241.png" alt="image-20211223015418241"></p>
+<h5 id="电磁泄漏"><a href="#电磁泄漏" class="headerlink" title="电磁泄漏"></a>电磁泄漏</h5><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223015954531.png" alt="image-20211223015954531"></p>
+<h5 id="电源调整器，不间断电源（UPS）"><a href="#电源调整器，不间断电源（UPS）" class="headerlink" title="电源调整器，不间断电源（UPS）"></a>电源调整器，不间断电源（UPS）</h5><h6 id="电源调整器："><a href="#电源调整器：" class="headerlink" title="电源调整器："></a>电源调整器：</h6><p><img src="/bupt-wyc.github.io/2021/12/22/xin-xi-xi-tong-qi-mo-fu-xi-12.22/Users\hp\AppData\Roaming\Typora\typora-user-images\image-20211223015559287.png" alt="image-20211223015559287"></p>
+<h6 id="不间断电源："><a href="#不间断电源：" class="headerlink" title="不间断电源："></a>不间断电源：</h6><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223015651919.png" alt="image-20211223015651919"></p>
+<h5 id="电磁战，防磁柜"><a href="#电磁战，防磁柜" class="headerlink" title="电磁战，防磁柜"></a>电磁战，防磁柜</h5><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223020043181.png" alt="image-20211223020043181"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223020113661.png" alt="image-20211223020113661"></p>
+<h4 id="原理：-5"><a href="#原理：-5" class="headerlink" title="原理："></a>原理：</h4><h5 id="机房的三度要求"><a href="#机房的三度要求" class="headerlink" title="机房的三度要求"></a>机房的三度要求</h5><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223015105326.png" alt="image-20211223015105326"></p>
+<h5 id="常见的消防设计"><a href="#常见的消防设计" class="headerlink" title="常见的消防设计"></a>常见的消防设计</h5><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223015243157.png" alt="image-20211223015243157"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223015252471.png" alt="image-20211223015252471"></p>
+<h5 id="GB-T-2887-2000-规定的三类供电方式"><a href="#GB-T-2887-2000-规定的三类供电方式" class="headerlink" title="GB/T 2887-2000 规定的三类供电方式"></a>GB/T 2887-2000 规定的三类供电方式</h5><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223015449184.png" alt="image-20211223015449184"></p>
+<h5 id="电源防护措施"><a href="#电源防护措施" class="headerlink" title="电源防护措施"></a>电源防护措施</h5><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223015539129.png" alt="image-20211223015539129"></p>
+<h5 id="接地与防雷要求"><a href="#接地与防雷要求" class="headerlink" title="接地与防雷要求"></a>接地与防雷要求</h5><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223015745042.png" alt="image-20211223015745042"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223015825699.png" alt="image-20211223015825699"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223015813727.png" alt="image-20211223015813727"></p>
+<h5 id="电磁泄漏产生的原理、电磁泄漏的途径及防护方法"><a href="#电磁泄漏产生的原理、电磁泄漏的途径及防护方法" class="headerlink" title="电磁泄漏产生的原理、电磁泄漏的途径及防护方法"></a>电磁泄漏产生的原理、电磁泄漏的途径及防护方法</h5><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223020219567.png" alt="image-20211223020219567"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223020200674.png" alt="image-20211223020200674"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223020235674.png" alt="image-20211223020235674"></p>
+<h4 id="操作：-5"><a href="#操作：-5" class="headerlink" title="操作："></a>操作：</h4><h5 id="防静电措施及操作"><a href="#防静电措施及操作" class="headerlink" title="防静电措施及操作"></a>防静电措施及操作</h5><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223020515949.png" alt="image-20211223020515949"></p>
+<h5 id="机房设计和建设中应该考虑的安全因素"><a href="#机房设计和建设中应该考虑的安全因素" class="headerlink" title="机房设计和建设中应该考虑的安全因素"></a>机房设计和建设中应该考虑的安全因素</h5><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223020434537.png" alt="image-20211223020434537"></p>
+<p><img src="/bupt-wyc.github.io/2021/12/22/xin-xi-xi-tong-qi-mo-fu-xi-12.22/Users\hp\AppData\Roaming\Typora\typora-user-images\image-20211223020405868.png" alt="image-20211223020405868"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223020346610.png" alt="image-20211223020346610"></p>
+<h3 id="第七讲信息系统的可靠性"><a href="#第七讲信息系统的可靠性" class="headerlink" title="第七讲信息系统的可靠性"></a>第七讲信息系统的可靠性</h3><h4 id="概念：-8"><a href="#概念：-8" class="headerlink" title="概念："></a>概念：</h4><h5 id="可靠性及其度量指标（MTBF，MTTF，失效率，可靠度）"><a href="#可靠性及其度量指标（MTBF，MTTF，失效率，可靠度）" class="headerlink" title="可靠性及其度量指标（MTBF，MTTF，失效率，可靠度）"></a>可靠性及其度量指标（MTBF，MTTF，失效率，可靠度）</h5><h6 id="可靠性："><a href="#可靠性：" class="headerlink" title="可靠性："></a>可靠性：</h6><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223171846873.png" alt="image-20211223171846873"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223171527388.png" alt="image-20211223171527388"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223171712157.png" alt="image-20211223171712157"></p>
+<h5 id="可维修产品、不可维修产品的可靠性指标，可用度"><a href="#可维修产品、不可维修产品的可靠性指标，可用度" class="headerlink" title="可维修产品、不可维修产品的可靠性指标，可用度"></a>可维修产品、不可维修产品的可靠性指标，可用度</h5><h6 id="不可维修产品："><a href="#不可维修产品：" class="headerlink" title="不可维修产品："></a>不可维修产品：</h6><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223171629539.png" alt="image-20211223171629539"></p>
+<h6 id="可维修产品："><a href="#可维修产品：" class="headerlink" title="可维修产品："></a>可维修产品：</h6><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223171938711.png" alt="image-20211223171938711"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223172423146.png" alt="image-20211223172423146"></p>
+<h5 id="网络可靠性，计算机网络可靠性故障特征"><a href="#网络可靠性，计算机网络可靠性故障特征" class="headerlink" title="网络可靠性，计算机网络可靠性故障特征"></a>网络可靠性，计算机网络可靠性故障特征</h5><h6 id="定义："><a href="#定义：" class="headerlink" title="定义："></a>定义：</h6><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223184143358.png" alt="image-20211223184143358"></p>
+<h6 id="网络可靠性故障特征："><a href="#网络可靠性故障特征：" class="headerlink" title="网络可靠性故障特征："></a>网络可靠性故障特征：</h6><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223184109868.png" alt="image-20211223184109868"></p>
+<h5 id="容错技术：故障检测和诊断技术，故障屏蔽技术，冗余技术"><a href="#容错技术：故障检测和诊断技术，故障屏蔽技术，冗余技术" class="headerlink" title="容错技术：故障检测和诊断技术，故障屏蔽技术，冗余技术"></a>容错技术：故障检测和诊断技术，故障屏蔽技术，冗余技术</h5><h6 id="故障检测和诊断技术："><a href="#故障检测和诊断技术：" class="headerlink" title="故障检测和诊断技术："></a>故障检测和诊断技术：</h6><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223184718008.png" alt="image-20211223184718008"></p>
+<h6 id="故障屏蔽技术："><a href="#故障屏蔽技术：" class="headerlink" title="故障屏蔽技术："></a>故障屏蔽技术：</h6><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223184731751.png" alt="image-20211223184731751"></p>
+<h6 id="冗余技术："><a href="#冗余技术：" class="headerlink" title="冗余技术："></a>冗余技术：</h6><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223184912845.png" alt="image-20211223184912845"></p>
+<h5 id="RAID"><a href="#RAID" class="headerlink" title="RAID"></a>RAID</h5><p><img src="/bupt-wyc.github.io/2021/12/22/xin-xi-xi-tong-qi-mo-fu-xi-12.22/Users\hp\AppData\Roaming\Typora\typora-user-images\image-20211223185455892.png" alt="image-20211223185455892"></p>
+<h5 id="纠删码（Erasure-Code）"><a href="#纠删码（Erasure-Code）" class="headerlink" title="纠删码（Erasure Code）"></a>纠删码（Erasure Code）</h5><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223190325847.png" alt="image-20211223190325847"></p>
+<h6 id="一些应用："><a href="#一些应用：" class="headerlink" title="一些应用："></a>一些应用：</h6><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223190631174.png" alt="image-20211223190631174"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223190648443.png" alt="image-20211223190648443"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223190658339.png" alt="image-20211223190658339"></p>
+<h4 id="原理：-6"><a href="#原理：-6" class="headerlink" title="原理："></a>原理：</h4><h5 id="失效率的规律，失效率、寿命、可靠度三者之间关系的推导"><a href="#失效率的规律，失效率、寿命、可靠度三者之间关系的推导" class="headerlink" title="失效率的规律，失效率、寿命、可靠度三者之间关系的推导"></a>失效率的规律，失效率、寿命、可靠度三者之间关系的推导</h5><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223172037306.png" alt="image-20211223172037306"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223172132590.png" alt="image-20211223172132590"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223172314329.png" alt="image-20211223172314329"></p>
+<h5 id="可靠性模型：串联，并联，表决，储备。串联、并联模型的寿命、可靠度推导"><a href="#可靠性模型：串联，并联，表决，储备。串联、并联模型的寿命、可靠度推导" class="headerlink" title="可靠性模型：串联，并联，表决，储备。串联、并联模型的寿命、可靠度推导"></a>可靠性模型：串联，并联，表决，储备。串联、并联模型的寿命、可靠度推导</h5><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223172524442.png" alt="image-20211223172524442"></p>
+<h6 id="串联系统："><a href="#串联系统：" class="headerlink" title="串联系统："></a>串联系统：</h6><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223172644295.png" alt="image-20211223172644295"></p>
+<p><img src="/bupt-wyc.github.io/2021/12/22/xin-xi-xi-tong-qi-mo-fu-xi-12.22/Users\hp\AppData\Roaming\Typora\typora-user-images\image-20211223172706758.png" alt="image-20211223172706758"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223172735651.png" alt="image-20211223172735651"></p>
+<h6 id="并联系统："><a href="#并联系统：" class="headerlink" title="并联系统："></a>并联系统：</h6><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223172755360.png" alt="image-20211223172755360"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223172907065.png" alt="image-20211223172907065"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223172920439.png" alt="image-20211223172920439"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223172933020.png" alt="image-20211223172933020"></p>
+<h6 id="表决系统："><a href="#表决系统：" class="headerlink" title="表决系统："></a>表决系统：</h6><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223173036401.png" alt="image-20211223173036401"></p>
+<h6 id="冷储备系统："><a href="#冷储备系统：" class="headerlink" title="冷储备系统："></a>冷储备系统：</h6><p><img src="/bupt-wyc.github.io/2021/12/22/xin-xi-xi-tong-qi-mo-fu-xi-12.22/Users\hp\AppData\Roaming\Typora\typora-user-images\image-20211223173135675.png" alt="image-20211223173135675"></p>
+<h5 id="硬件可靠性和软件可靠性的不同及各自特点"><a href="#硬件可靠性和软件可靠性的不同及各自特点" class="headerlink" title="硬件可靠性和软件可靠性的不同及各自特点"></a>硬件可靠性和软件可靠性的不同及各自特点</h5><h6 id="硬件可靠性："><a href="#硬件可靠性：" class="headerlink" title="硬件可靠性："></a>硬件可靠性：</h6><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223183139205.png" alt="image-20211223183139205"></p>
+<h6 id="软件可靠性："><a href="#软件可靠性：" class="headerlink" title="软件可靠性："></a>软件可靠性：</h6><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223183225296.png" alt="image-20211223183225296"></p>
+<h5 id="软件的四种常见的可靠性模型"><a href="#软件的四种常见的可靠性模型" class="headerlink" title="软件的四种常见的可靠性模型"></a>软件的四种常见的可靠性模型</h5><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223183913143.png" alt="image-20211223183913143"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223183933555.png" alt="image-20211223183933555"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223183944696.png" alt="image-20211223183944696"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223183958691.png" alt="image-20211223183958691"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223184016546.png" alt="image-20211223184016546"></p>
+<h5 id="网络可靠性迫切需要解决的关键性问题"><a href="#网络可靠性迫切需要解决的关键性问题" class="headerlink" title="网络可靠性迫切需要解决的关键性问题"></a>网络可靠性迫切需要解决的关键性问题</h5><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223184411907.png" alt="image-20211223184411907"></p>
+<h5 id="三模冗余（硬件冗余）原理及优缺点"><a href="#三模冗余（硬件冗余）原理及优缺点" class="headerlink" title="三模冗余（硬件冗余）原理及优缺点"></a>三模冗余（硬件冗余）原理及优缺点</h5><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223185004043.png" alt="image-20211223185004043"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223185048143.png" alt="image-20211223185048143"></p>
+<h5 id="时间冗余技术"><a href="#时间冗余技术" class="headerlink" title="时间冗余技术"></a>时间冗余技术</h5><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223185110002.png" alt="image-20211223185110002"></p>
+<h5 id="信息冗余技术"><a href="#信息冗余技术" class="headerlink" title="信息冗余技术"></a>信息冗余技术</h5><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223185125599.png" alt="image-20211223185125599"></p>
+<h6 id="举例：-1"><a href="#举例：-1" class="headerlink" title="举例："></a>举例：</h6><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223185144307.png" alt="image-20211223185144307"></p>
+<h5 id="软件冗余技术：N-Version-Programming-和-Recovery-Block-的对比"><a href="#软件冗余技术：N-Version-Programming-和-Recovery-Block-的对比" class="headerlink" title="软件冗余技术：N-Version Programming 和 Recovery Block 的对比"></a>软件冗余技术：N-Version Programming 和 Recovery Block 的对比</h5><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223185316928.png" alt="image-20211223185316928"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223185339391.png" alt="image-20211223185339391"></p>
+<p><img src="/bupt-wyc.github.io/2021/12/22/xin-xi-xi-tong-qi-mo-fu-xi-12.22/Users\hp\AppData\Roaming\Typora\typora-user-images\image-20211223185350950.png" alt="image-20211223185350950"></p>
+<h5 id="热备份"><a href="#热备份" class="headerlink" title="热备份"></a>热备份</h5><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223185442984.png" alt="image-20211223185442984"></p>
+<h5 id="影响-RAID-分级的三个因素：镜像，校验，分条"><a href="#影响-RAID-分级的三个因素：镜像，校验，分条" class="headerlink" title="影响 RAID 分级的三个因素：镜像，校验，分条"></a>影响 RAID 分级的三个因素：镜像，校验，分条</h5><h6 id="镜像："><a href="#镜像：" class="headerlink" title="镜像："></a>镜像：</h6><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223185550394.png" alt="image-20211223185550394"></p>
+<h6 id="校验："><a href="#校验：" class="headerlink" title="校验："></a>校验：</h6><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223185631481.png" alt="image-20211223185631481"></p>
+<h6 id="分条："><a href="#分条：" class="headerlink" title="分条："></a>分条：</h6><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223185606208.png" alt="image-20211223185606208"></p>
+<h5 id="RAID0-RAID6、RAID10、RAID01-的原理"><a href="#RAID0-RAID6、RAID10、RAID01-的原理" class="headerlink" title="RAID0-RAID6、RAID10、RAID01 的原理"></a>RAID0-RAID6、RAID10、RAID01 的原理</h5><h6 id="RAID0"><a href="#RAID0" class="headerlink" title="RAID0:"></a>RAID0:</h6><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223185834881.png" alt="image-20211223185834881"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223185901194.png" alt="image-20211223185901194"></p>
+<h6 id="RAID1"><a href="#RAID1" class="headerlink" title="RAID1:"></a>RAID1:</h6><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223185909182.png" alt="image-20211223185909182"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223185922560.png" alt="image-20211223185922560"></p>
+<h6 id="RAID2"><a href="#RAID2" class="headerlink" title="RAID2:"></a>RAID2:</h6><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223185933747.png" alt="image-20211223185933747"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223185941960.png" alt="image-20211223185941960"></p>
+<h6 id="RAID3"><a href="#RAID3" class="headerlink" title="RAID3:"></a>RAID3:</h6><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223185950591.png" alt="image-20211223185950591"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223185959112.png" alt="image-20211223185959112"></p>
+<h6 id="RAID4"><a href="#RAID4" class="headerlink" title="RAID4:"></a>RAID4:</h6><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223190012206.png" alt="image-20211223190012206"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223190020996.png" alt="image-20211223190020996"></p>
+<h6 id="RAID5"><a href="#RAID5" class="headerlink" title="RAID5:"></a>RAID5:</h6><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223190052564.png" alt="image-20211223190052564"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223190103473.png" alt="image-20211223190103473"></p>
+<h6 id="RAID6"><a href="#RAID6" class="headerlink" title="RAID6:"></a>RAID6:</h6><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223190221735.png" alt="image-20211223190221735"></p>
+<h6 id="RAID10"><a href="#RAID10" class="headerlink" title="RAID10:"></a>RAID10:</h6><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223190154452.png" alt="image-20211223190154452"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223190242843.png" alt="image-20211223190242843"></p>
+<h5 id="Reed-Solomon-纠删码的基本原理"><a href="#Reed-Solomon-纠删码的基本原理" class="headerlink" title="Reed-Solomon 纠删码的基本原理"></a>Reed-Solomon 纠删码的基本原理</h5><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223190425686.png" alt="image-20211223190425686"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223190442333.png" alt="image-20211223190442333"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223190454755.png" alt="image-20211223190454755"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223190504860.png" alt="image-20211223190504860"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223190513437.png" alt="image-20211223190513437"></p>
+<h5 id="提高信息系统可靠性的途径，包括硬件可靠性、软件可靠性："><a href="#提高信息系统可靠性的途径，包括硬件可靠性、软件可靠性：" class="headerlink" title="提高信息系统可靠性的途径，包括硬件可靠性、软件可靠性："></a>提高信息系统可靠性的途径，包括硬件可靠性、软件可靠性：</h5><h6 id="提高硬件可靠性："><a href="#提高硬件可靠性：" class="headerlink" title="提高硬件可靠性："></a>提高硬件可靠性：</h6><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223183344716.png" alt="image-20211223183344716"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223183355031.png" alt="image-20211223183355031"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223183405246.png" alt="image-20211223183405246"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223183415413.png" alt="image-20211223183415413"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223183423383.png" alt="image-20211223183423383"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223183435900.png" alt="image-20211223183435900"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223183600809.png" alt="image-20211223183600809"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223183610826.png" alt="image-20211223183610826"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223183645081.png" alt="image-20211223183645081"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223183654347.png" alt="image-20211223183654347"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223183703710.png" alt="image-20211223183703710"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223183722070.png" alt="image-20211223183722070"></p>
+<h6 id="提高软件可靠性："><a href="#提高软件可靠性：" class="headerlink" title="提高软件可靠性："></a>提高软件可靠性：</h6><p><img src="/bupt-wyc.github.io/2021/12/22/xin-xi-xi-tong-qi-mo-fu-xi-12.22/Users\hp\AppData\Roaming\Typora\typora-user-images\image-20211223183820166.png" alt="image-20211223183820166"></p>
+<h3 id="第八讲计算机取证"><a href="#第八讲计算机取证" class="headerlink" title="第八讲计算机取证"></a>第八讲计算机取证</h3><h4 id="概念：-9"><a href="#概念：-9" class="headerlink" title="概念："></a>概念：</h4><h5 id="什么是计算机取证和取证科学"><a href="#什么是计算机取证和取证科学" class="headerlink" title="什么是计算机取证和取证科学"></a>什么是计算机取证和取证科学</h5><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223020623841.png" alt="image-20211223020623841"></p>
+<h5 id="活取证和死取证"><a href="#活取证和死取证" class="headerlink" title="活取证和死取证"></a>活取证和死取证</h5><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223020830881.png" alt="image-20211223020830881"></p>
+<h4 id="原理：-7"><a href="#原理：-7" class="headerlink" title="原理："></a>原理：</h4><h5 id="数字取证中的信息收集目标、信息收集的主要侧重点"><a href="#数字取证中的信息收集目标、信息收集的主要侧重点" class="headerlink" title="数字取证中的信息收集目标、信息收集的主要侧重点"></a>数字取证中的信息收集目标、信息收集的主要侧重点</h5><h6 id="信息收集目标"><a href="#信息收集目标" class="headerlink" title="信息收集目标"></a>信息收集目标</h6><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223021452560.png" alt="image-20211223021452560"></p>
+<h6 id="主要侧重点："><a href="#主要侧重点：" class="headerlink" title="主要侧重点："></a>主要侧重点：</h6><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223021310914.png" alt="image-20211223021310914"></p>
+<h5 id="取证的一般流程"><a href="#取证的一般流程" class="headerlink" title="取证的一般流程"></a>取证的一般流程</h5><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223021527187.png" alt="image-20211223021527187"></p>
+<h5 id="现场系统获取信息后的处理方法"><a href="#现场系统获取信息后的处理方法" class="headerlink" title="现场系统获取信息后的处理方法"></a>现场系统获取信息后的处理方法</h5><p><img src="/bupt-wyc.github.io/2021/12/22/xin-xi-xi-tong-qi-mo-fu-xi-12.22/Users\hp\AppData\Roaming\Typora\typora-user-images\image-20211223021711910.png" alt="image-20211223021711910"></p>
+<h4 id="操作：-6"><a href="#操作：-6" class="headerlink" title="操作："></a>操作：</h4><h5 id="常见的取证工具"><a href="#常见的取证工具" class="headerlink" title="常见的取证工具"></a>常见的取证工具</h5><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223020935623.png" alt="image-20211223020935623"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223020948942.png" alt="image-20211223020948942"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223021003425.png" alt="image-20211223021003425"></p>
+<h5 id="制定一个简单的取证方案"><a href="#制定一个简单的取证方案" class="headerlink" title="制定一个简单的取证方案"></a>制定一个简单的取证方案</h5><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223021857006.png" alt="image-20211223021857006"></p>
+<p>按照上图设计</p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223022105358.png" alt="image-20211223022105358"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223022120416.png" alt="image-20211223022120416"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223022139001.png" alt="image-20211223022139001"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223022154624.png" alt="image-20211223022154624"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223022205442.png" alt="image-20211223022205442"></p>
+<h3 id="第九讲操作系统安全"><a href="#第九讲操作系统安全" class="headerlink" title="第九讲操作系统安全"></a>第九讲操作系统安全</h3><h4 id="概念：-10"><a href="#概念：-10" class="headerlink" title="概念："></a>概念：</h4><h5 id="隐通道"><a href="#隐通道" class="headerlink" title="隐通道"></a>隐通道</h5><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223155721836.png" alt="image-20211223155721836"></p>
+<h5 id="Symbian-OS-的能力模型，数据锁定"><a href="#Symbian-OS-的能力模型，数据锁定" class="headerlink" title="Symbian OS 的能力模型，数据锁定"></a>Symbian OS 的能力模型，数据锁定</h5><h6 id="能力模型："><a href="#能力模型：" class="headerlink" title="能力模型："></a>能力模型：</h6><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223163413193.png" alt="image-20211223163413193"></p>
+<h6 id="数据锁定："><a href="#数据锁定：" class="headerlink" title="数据锁定："></a>数据锁定：</h6><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223163602063.png" alt="image-20211223163602063"></p>
+<h5 id="资源管理模式：工作组，域，域控制器"><a href="#资源管理模式：工作组，域，域控制器" class="headerlink" title="资源管理模式：工作组，域，域控制器"></a>资源管理模式：工作组，域，域控制器</h5><h6 id="工作组："><a href="#工作组：" class="headerlink" title="工作组："></a>工作组：</h6><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223164436086.png" alt="image-20211223164436086"></p>
+<h6 id="域："><a href="#域：" class="headerlink" title="域："></a>域：</h6><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223164328370.png" alt="image-20211223164328370"></p>
+<h6 id="域控制器："><a href="#域控制器：" class="headerlink" title="域控制器："></a>域控制器：</h6><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223164520347.png" alt="image-20211223164520347"></p>
+<h5 id="目录服务，活动目录，schema，目录服务提供的好处"><a href="#目录服务，活动目录，schema，目录服务提供的好处" class="headerlink" title="目录服务，活动目录，schema，目录服务提供的好处"></a>目录服务，活动目录，schema，目录服务提供的好处</h5><h6 id="活动目录："><a href="#活动目录：" class="headerlink" title="活动目录："></a>活动目录：</h6><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223164659186.png" alt="image-20211223164659186"></p>
+<h6 id="目录服务："><a href="#目录服务：" class="headerlink" title="目录服务："></a>目录服务：</h6><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223164725462.png" alt="image-20211223164725462"></p>
+<h6 id="schema："><a href="#schema：" class="headerlink" title="schema："></a>schema：</h6><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223164838718.png" alt="image-20211223164838718"></p>
+<h6 id="目录服务提供的好处："><a href="#目录服务提供的好处：" class="headerlink" title="目录服务提供的好处："></a>目录服务提供的好处：</h6><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223164931130.png" alt="image-20211223164931130"></p>
+<h5 id="组策略"><a href="#组策略" class="headerlink" title="组策略"></a>组策略</h5><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223165510249.png" alt="image-20211223165510249"></p>
+<h5 id="站点（site）"><a href="#站点（site）" class="headerlink" title="站点（site）"></a>站点（site）</h5><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223170344919.png" alt="image-20211223170344919"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223170400036.png" alt="image-20211223170400036"></p>
+<h4 id="原理：-8"><a href="#原理：-8" class="headerlink" title="原理："></a>原理：</h4><h5 id="操作系统面临的安全威胁"><a href="#操作系统面临的安全威胁" class="headerlink" title="操作系统面临的安全威胁"></a>操作系统面临的安全威胁</h5><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223154901532.png" alt="image-20211223154901532"></p>
+<h5 id="存储隐通道和时间隐通道的原理"><a href="#存储隐通道和时间隐通道的原理" class="headerlink" title="存储隐通道和时间隐通道的原理"></a>存储隐通道和时间隐通道的原理</h5><h6 id="存储隐通道："><a href="#存储隐通道：" class="headerlink" title="存储隐通道："></a>存储隐通道：</h6><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223155909722.png" alt="image-20211223155909722"></p>
+<h6 id="时间隐通道："><a href="#时间隐通道：" class="headerlink" title="时间隐通道："></a>时间隐通道：</h6><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223160009131.png" alt="image-20211223160009131"></p>
+<h5 id="物联网和虚拟化技术对操作系统带来的安全挑战"><a href="#物联网和虚拟化技术对操作系统带来的安全挑战" class="headerlink" title="物联网和虚拟化技术对操作系统带来的安全挑战"></a>物联网和虚拟化技术对操作系统带来的安全挑战</h5><h6 id="物联网带来的安全性问题："><a href="#物联网带来的安全性问题：" class="headerlink" title="物联网带来的安全性问题："></a>物联网带来的安全性问题：</h6><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223160555482.png" alt="image-20211223160555482"></p>
+<h6 id="虚拟化技术带来的安全性问题："><a href="#虚拟化技术带来的安全性问题：" class="headerlink" title="虚拟化技术带来的安全性问题："></a>虚拟化技术带来的安全性问题：</h6><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223160614697.png" alt="image-20211223160614697"></p>
+<h5 id="操作系统的一般性安全机制（隔离机制、访问控制、信息加密、审计机制等）"><a href="#操作系统的一般性安全机制（隔离机制、访问控制、信息加密、审计机制等）" class="headerlink" title="操作系统的一般性安全机制（隔离机制、访问控制、信息加密、审计机制等）"></a>操作系统的一般性安全机制（隔离机制、访问控制、信息加密、审计机制等）</h5><h6 id="隔离机制："><a href="#隔离机制：" class="headerlink" title="隔离机制："></a>隔离机制：</h6><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223161006435.png" alt="image-20211223161006435"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223161549608.png" alt="image-20211223161549608"></p>
+<h6 id="访问控制："><a href="#访问控制：" class="headerlink" title="访问控制："></a>访问控制：</h6><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223161747124.png" alt="image-20211223161747124"></p>
+<h6 id="信息加密："><a href="#信息加密：" class="headerlink" title="信息加密："></a>信息加密：</h6><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223162647205.png" alt="image-20211223162647205"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223162720244.png" alt="image-20211223162720244"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223162752256.png"></p>
+<h6 id="审计机制："><a href="#审计机制：" class="headerlink" title="审计机制："></a>审计机制：</h6><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223162942824.png" alt="image-20211223162942824"></p>
+<h5 id="身份认证的常见方式和协议，一次性口令（OTP），Kerberos-协议的原理"><a href="#身份认证的常见方式和协议，一次性口令（OTP），Kerberos-协议的原理" class="headerlink" title="身份认证的常见方式和协议，一次性口令（OTP），Kerberos 协议的原理"></a>身份认证的常见方式和协议，一次性口令（OTP），Kerberos 协议的原理</h5><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223161854473.png" alt="image-20211223161854473"></p>
+<h6 id="一次性口令otp："><a href="#一次性口令otp：" class="headerlink" title="一次性口令otp："></a>一次性口令otp：</h6><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223162000624.png" alt="image-20211223162000624"></p>
+<h6 id="Kerberos-协议的原理："><a href="#Kerberos-协议的原理：" class="headerlink" title="Kerberos 协议的原理："></a>Kerberos 协议的原理：</h6><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223162305855.png" alt="image-20211223162305855"></p>
+<h5 id="Symbian-OS-体系结构及安全机制，Symbian-内核安全性的三个要素"><a href="#Symbian-OS-体系结构及安全机制，Symbian-内核安全性的三个要素" class="headerlink" title="Symbian OS 体系结构及安全机制，Symbian 内核安全性的三个要素"></a>Symbian OS 体系结构及安全机制，Symbian 内核安全性的三个要素</h5><h6 id="体系结构："><a href="#体系结构：" class="headerlink" title="体系结构："></a>体系结构：</h6><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223163126416.png" alt="image-20211223163126416"></p>
+<h6 id="安全机制："><a href="#安全机制：" class="headerlink" title="安全机制："></a>安全机制：</h6><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223163749501.png" alt="image-20211223163749501"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223163801397.png" alt="image-20211223163801397"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223163816660.png" alt="image-20211223163816660"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223163828080.png" alt="image-20211223163828080"></p>
+<h6 id="内核安全性的三个要素："><a href="#内核安全性的三个要素：" class="headerlink" title="内核安全性的三个要素："></a>内核安全性的三个要素：</h6><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223163301769.png" alt="image-20211223163301769"></p>
+<h5 id="活动目录的逻辑结构和物理结构，为什么需要活动目录的物理结构？"><a href="#活动目录的逻辑结构和物理结构，为什么需要活动目录的物理结构？" class="headerlink" title="活动目录的逻辑结构和物理结构，为什么需要活动目录的物理结构？"></a>活动目录的逻辑结构和物理结构，为什么需要活动目录的物理结构？</h5><h6 id="逻辑结构："><a href="#逻辑结构：" class="headerlink" title="逻辑结构："></a>逻辑结构：</h6><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223165026477.png" alt="image-20211223165026477"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223165206655.png" alt="image-20211223165206655"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223165220334.png" alt="image-20211223165220334"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223165237421.png" alt="image-20211223165237421"></p>
+<h6 id="物理结构："><a href="#物理结构：" class="headerlink" title="物理结构："></a>物理结构：</h6><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223165332036.png" alt="image-20211223165332036"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223165357074.png" alt="image-20211223165357074"></p>
+<h5 id="组策略的主要优势，组策略和-OU-的关系"><a href="#组策略的主要优势，组策略和-OU-的关系" class="headerlink" title="组策略的主要优势，组策略和 OU 的关系"></a>组策略的主要优势，组策略和 OU 的关系</h5><h6 id="主要优势："><a href="#主要优势：" class="headerlink" title="主要优势："></a>主要优势：</h6><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223165639709.png" alt="image-20211223165639709"></p>
+<h6 id="组策略和OU的关系："><a href="#组策略和OU的关系：" class="headerlink" title="组策略和OU的关系："></a>组策略和OU的关系：</h6><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223165817730.png" alt="image-20211223165817730"></p>
+<h5 id="ACL-默认的执行顺序，配置时遵循的原则"><a href="#ACL-默认的执行顺序，配置时遵循的原则" class="headerlink" title="ACL 默认的执行顺序，配置时遵循的原则"></a>ACL 默认的执行顺序，配置时遵循的原则</h5><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223170835704.png" alt="image-20211223170835704"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223170849353.png" alt="image-20211223170849353"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223170859043.png" alt="image-20211223170859043"></p>
+<h3 id="第十讲数据库安全"><a href="#第十讲数据库安全" class="headerlink" title="第十讲数据库安全"></a>第十讲数据库安全</h3><h4 id="概念：-11"><a href="#概念：-11" class="headerlink" title="概念："></a>概念：</h4><h5 id="例程"><a href="#例程" class="headerlink" title="例程"></a>例程</h5><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223022946367.png" alt="image-20211223022946367"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223023038420.png" alt="image-20211223023038420"></p>
+<h5 id="进程结构，存储结构，内存结构"><a href="#进程结构，存储结构，内存结构" class="headerlink" title="进程结构，存储结构，内存结构"></a>进程结构，存储结构，内存结构</h5><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223023121225.png" alt="image-20211223023121225"></p>
+<h5 id="Oracle-数据库物理存储结构"><a href="#Oracle-数据库物理存储结构" class="headerlink" title="Oracle 数据库物理存储结构"></a>Oracle 数据库物理存储结构</h5><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223023205725.png" alt="image-20211223023205725"></p>
+<h5 id="Oracle-数据库逻辑存储结构，表空间"><a href="#Oracle-数据库逻辑存储结构，表空间" class="headerlink" title="Oracle 数据库逻辑存储结构，表空间"></a>Oracle 数据库逻辑存储结构，表空间</h5><h6 id="逻辑存储结构："><a href="#逻辑存储结构：" class="headerlink" title="逻辑存储结构："></a>逻辑存储结构：</h6><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223023358831.png" alt="image-20211223023358831"></p>
+<h6 id="表空间："><a href="#表空间：" class="headerlink" title="表空间："></a>表空间：</h6><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223023427214.png" alt="image-20211223023427214"></p>
+<h5 id="Oracle-数据库的内存结构：系统全局区（SGA），程序全局区（PGA）"><a href="#Oracle-数据库的内存结构：系统全局区（SGA），程序全局区（PGA）" class="headerlink" title="Oracle 数据库的内存结构：系统全局区（SGA），程序全局区（PGA）"></a>Oracle 数据库的内存结构：系统全局区（SGA），程序全局区（PGA）</h5><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223023631752.png" alt="image-20211223023631752"></p>
+<h6 id="系统全局区："><a href="#系统全局区：" class="headerlink" title="系统全局区："></a>系统全局区：</h6><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223023657769.png" alt="image-20211223023657769"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223023719807.png" alt="image-20211223023719807"></p>
+<h6 id="程序全局区："><a href="#程序全局区：" class="headerlink" title="程序全局区："></a>程序全局区：</h6><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223023753942.png" alt="image-20211223023753942"></p>
+<h4 id="原理：-9"><a href="#原理：-9" class="headerlink" title="原理："></a>原理：</h4><h5 id="Oracle-客户端通过例程和后台数据库的交互方式"><a href="#Oracle-客户端通过例程和后台数据库的交互方式" class="headerlink" title="Oracle 客户端通过例程和后台数据库的交互方式"></a>Oracle 客户端通过例程和后台数据库的交互方式</h5><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223023908085.png" alt="image-20211223023908085"></p>
+<h5 id="物理结构主要包括以下三种文件：控制文件（-ctl），数据文件（-dbf），-重做日志"><a href="#物理结构主要包括以下三种文件：控制文件（-ctl），数据文件（-dbf），-重做日志" class="headerlink" title="物理结构主要包括以下三种文件：控制文件（.ctl），数据文件（.dbf）， 重做日志"></a>物理结构主要包括以下三种文件：控制文件（.ctl），数据文件（.dbf）， 重做日志</h5><h6 id="控制文件："><a href="#控制文件：" class="headerlink" title="控制文件："></a>控制文件：</h6><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223024204458.png" alt="image-20211223024204458"></p>
+<p>可以理解为一个元数据库</p>
+<h6 id="数据文件："><a href="#数据文件：" class="headerlink" title="数据文件："></a>数据文件：</h6><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223024140603.png" alt="image-20211223024140603"></p>
+<h6 id="重做日志："><a href="#重做日志：" class="headerlink" title="重做日志："></a>重做日志：</h6><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223024151803.png" alt="image-20211223024151803"></p>
+<h5 id="当前的数据库安全防御体系，传统安全方案的缺陷"><a href="#当前的数据库安全防御体系，传统安全方案的缺陷" class="headerlink" title="当前的数据库安全防御体系，传统安全方案的缺陷"></a>当前的数据库安全防御体系，传统安全方案的缺陷</h5><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223024306570.png" alt="image-20211223024306570"></p>
+<h5 id="Oracle-的安全体系结构"><a href="#Oracle-的安全体系结构" class="headerlink" title="Oracle 的安全体系结构"></a>Oracle 的安全体系结构</h5><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223024613475.png" alt="image-20211223024613475"></p>
+<h6 id="oracle安全机制："><a href="#oracle安全机制：" class="headerlink" title="oracle安全机制："></a>oracle安全机制：</h6><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223024417099.png" alt="image-20211223024417099"></p>
+<h5 id="云背景下数据库安全性"><a href="#云背景下数据库安全性" class="headerlink" title="云背景下数据库安全性"></a>云背景下数据库安全性</h5><p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223024523698.png" alt="image-20211223024523698"></p>
+<p><img src="https://yuchen-1308044567.cos.ap-beijing.myqcloud.com/image-20211223024507101.png" alt="image-20211223024507101"></p>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/bupt-wyc.github.io/about" rel="external nofollow noreferrer">yuchen</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://bupt-wyc.github.io/bupt-wyc.github.io/2021/12/22/xin-xi-xi-tong-qi-mo-fu-xi-12.22/">https://bupt-wyc.github.io/bupt-wyc.github.io/2021/12/22/xin-xi-xi-tong-qi-mo-fu-xi-12.22/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/bupt-wyc.github.io/about" target="_blank">yuchen</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/bupt-wyc.github.io/tags/os/">
+                                    <span class="chip bg-color">os</span>
+                                </a>
+                            
+                                <a href="/bupt-wyc.github.io/tags/fuxi/">
+                                    <span class="chip bg-color">fuxi</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/bupt-wyc.github.io/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/bupt-wyc.github.io/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">赶紧给爷打钱</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/bupt-wyc.github.io/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/bupt-wyc.github.io/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+        <style>
+    .valine-card {
+        margin: 1.5rem auto;
+    }
+
+    .valine-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+
+    #vcomments textarea {
+        box-sizing: border-box;
+        background: url("/bupt-wyc.github.io/medias/comment_bg.png") 100% 100% no-repeat;
+    }
+
+    #vcomments p {
+        margin: 2px 2px 10px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
+    }
+
+    #vcomments blockquote p {
+        text-indent: 0.2rem;
+    }
+
+    #vcomments a {
+        padding: 0 2px;
+        color: #4cbf30;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    #vcomments img {
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    #vcomments ol li {
+        list-style-type: decimal;
+    }
+
+    #vcomments ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
+    }
+
+    #vcomments ul li,
+    ol li {
+        display: list-item;
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+
+    #vcomments ul li {
+        list-style-type: disc;
+    }
+
+    #vcomments ul ul li {
+        list-style-type: circle;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    #vcomments table, th, td {
+        border: 0;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+
+    #vcomments h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+
+    #vcomments h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+
+    #vcomments h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    #vcomments h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+
+    #vcomments h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    #vcomments p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    #vcomments hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+
+    #vcomments blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #42b983;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+
+    #vcomments pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+
+    #vcomments code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+
+    #vcomments pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+
+    #vcomments pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+
+    #vcomments code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+    #vcomments b,
+    strong {
+        font-weight: bold;
+    }
+
+    #vcomments dfn {
+        font-style: italic;
+    }
+
+    #vcomments small {
+        font-size: 85%;
+    }
+
+    #vcomments cite {
+        font-style: normal;
+    }
+
+    #vcomments mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+</style>
+
+<div class="card valine-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="vcomments" class="card-content" style="display: grid">
+    </div>
+</div>
+
+<script src="/bupt-wyc.github.io/libs/valine/av-min.js"></script>
+<script src="/bupt-wyc.github.io/libs/valine/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: 'N8LYS6ndKI3BmSnIJtYo4Lug-gzGzoHsz',
+        appKey: 'UglhQWzMjEakE1ETI5nRp7IQ',
+        notify: 'true' === 'true',
+        verify: 'true' === 'true',
+        visitor: 'true' === 'true',
+        avatar: 'mm',
+        pageSize: '10',
+        lang: 'zh-cn',
+        placeholder: 'just go go'
+    });
+</script>
+
+<!--酷Q推送-->
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/bupt-wyc.github.io/2021/12/22/xin-xi-xi-tong-qi-mo-fu-xi-12.22/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/bupt-wyc.github.io/medias/featureimages/0.jpg" class="responsive-img" alt="信息系统安全期末复习">
+                        
+                        <span class="card-title">信息系统安全期末复习</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            照着老师的大纲整理的
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-12-22
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/bupt-wyc.github.io/categories/%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99/" class="post-category">
+                                    复习资料
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/bupt-wyc.github.io/tags/os/">
+                        <span class="chip bg-color">os</span>
+                    </a>
+                    
+                    <a href="/bupt-wyc.github.io/tags/fuxi/">
+                        <span class="chip bg-color">fuxi</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/bupt-wyc.github.io/2021/11/19/2021-11-15-cao-zuo-xi-tong-nei-he-shi-yan-di-wu-ci-bao-gao/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/bupt-wyc.github.io/medias/featureimages/2.jpg" class="responsive-img" alt="操作系统内核实验第五次报告">
+                        
+                        <span class="card-title">操作系统内核实验第五次报告</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            操作系统内核实验第五次
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-11-19
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/bupt-wyc.github.io/categories/%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A/" class="post-category">
+                                    实验报告
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/bupt-wyc.github.io/tags/os/">
+                        <span class="chip bg-color">os</span>
+                    </a>
+                    
+                    <a href="/bupt-wyc.github.io/tags/shiyan/">
+                        <span class="chip bg-color">shiyan</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/bupt-wyc.github.io/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/bupt-wyc.github.io/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/bupt-wyc.github.io/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/bupt-wyc.github.io/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/bupt-wyc.github.io/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+
+    <div class="container row center-align"
+         style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2021</span>
+            
+            <a href="/bupt-wyc.github.io/about" target="_blank">yuchen</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+                &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                        class="white-color">8k</span>
+            
+            
+            
+                
+            
+            
+                <span id="busuanzi_container_site_pv">
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+                <span id="busuanzi_container_site_uv">
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
+                    <span id="busuanzi_value_site_uv" class="white-color"></span>
+            </span>
+            
+            <br>
+
+            <!-- 运行天数提醒. -->
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/bupt-wyc" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:1436309771@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1436309771" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1436309771" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+    <a href="https://weibo.com/u/7219893757" class="tooltipped" target="_blank" data-tooltip="关注我的微博: https://weibo.com/u/7219893757" data-position="top" data-delay="50">
+        <i class="fab fa-weibo"></i>
+    </a>
+
+
+
+    <a href="https://www.zhihu.com/people/chen-shao-85-56" class="tooltipped" target="_blank" data-tooltip="关注我的知乎: https://www.zhihu.com/people/chen-shao-85-56" data-position="top" data-delay="50">
+        <i class="fab fa-zhihu1">知</i>
+    </a>
+
+
+
+    <a href="/bupt-wyc.github.io/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/bupt-wyc.github.io/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/bupt-wyc.github.io/libs/materialize/materialize.min.js"></script>
+    <script src="/bupt-wyc.github.io/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/bupt-wyc.github.io/libs/aos/aos.js"></script>
+    <script src="/bupt-wyc.github.io/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/bupt-wyc.github.io/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/bupt-wyc.github.io/js/matery.js"></script>
+
+    
+
+    
+        
+        <script type="text/javascript">
+            // 只在桌面版网页启用特效
+            var windowWidth = $(window).width();
+            if (windowWidth > 768) {
+                document.write('<script type="text/javascript" src="/bupt-wyc.github.io/libs/others/sakura.js"><\/script>');
+            }
+        </script>
+    
+
+    <!-- 雪花特效 -->
+     
+        <script type="text/javascript">
+            // 只在桌面版网页启用特效
+            var windowWidth = $(window).width();
+            if (windowWidth > 768) {
+                document.write('<script type="text/javascript" src="/bupt-wyc.github.io/"><\/script>');
+            }
+        </script>
+    
+<!--动态线条背景-->
+<script type="text/javascript"
+color="122 103 238" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+</script>
+    <!-- 鼠标星星特效 -->
+     
+        <script type="text/javascript">
+            // 只在桌面版网页启用特效
+            var windowWidth = $(window).width();
+            if (windowWidth > 768) {
+                document.write('<script type="text/javascript" src="/bupt-wyc.github.io/"><\/script>');
+            }
+        </script>
+    
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/bupt-wyc.github.io/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/bupt-wyc.github.io/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+
+    
+
+    
+
+    
+    <script src="/bupt-wyc.github.io/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+<!-- hexo injector body_end start --><script data-pjax>function history_calendar_injector_config(){
+                var parent_div_git = document.getElementsByClassName('sticky_layout')[0];
+                var item_html = '<div class="card-widget card-history"><div class="card-content"><div class="item-headline"><i class="fas fa-clock fa-spin"></i><span>那年今日</span></div><div id="history-baidu" style="height: 100px;overflow: hidden"><div class="history_swiper-container" id="history-container" style="width: 100%;height: 100%"><div class="swiper-wrapper" id="history_container_wrapper" style="height:20px"></div></div></div></div>';
+                console.log('已挂载history_calendar')
+                // parent_div_git.innerHTML=item_html+parent_div_git.innerHTML // 无报错，但不影响使用(支持pjax跳转)
+                parent_div_git.insertAdjacentHTML("afterbegin",item_html) // 有报错，但不影响使用(支持pjax跳转)
+            }if( document.getElementsByClassName('sticky_layout')[0] && (location.pathname ==='all'|| 'all' ==='all')){
+
+            history_calendar_injector_config()
+        } </script><script data-pjax  src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script><script data-pjax src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-card-history/baiduhistory/js/main.js"></script><script data-pjax>function electric_clock_injector_config(){
+                var parent_div_git = document.getElementsByClassName('sticky_layout')[0];
+                var item_html = '<div class="card-widget card-clock"><div class="card-glass"><div class="card-background"><div class="card-content"><div id="hexo_electric_clock"><img id="card-clock-loading" src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-clock/clock/images/weather/loading.gif" style="height: 120px; width: 100%;" data-ll-status="loading" class="entered loading"></div></div></div></div></div>';
+                console.log('已挂载electric_clock')
+                // parent_div_git.innerHTML=item_html+parent_div_git.innerHTML // 无报错，但不影响使用(支持pjax跳转)
+                parent_div_git.insertAdjacentHTML("afterbegin",item_html) // 有报错，但不影响使用(支持pjax跳转)
+            }if( document.getElementsByClassName('sticky_layout')[0] && (location.pathname ==='all'|| 'all' ==='all')){
+
+            electric_clock_injector_config()
+        } </script><script src="https://pv.sohu.com/cityjson?ie=utf-8"></script><script data-pjax  src="https://cdn.jsdelivr.net/gh/Zfour/hexo-electric-clock@1.0.6/clock.js"></script><!-- hexo injector body_end end --></body>
+
+</html>
